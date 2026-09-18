@@ -57,22 +57,22 @@
 
 ---
 
-### Slide 5: Red Teaming & Blindagem contra Ataques (4:15 - 5:15)
-* **Visual do Slide:** Comparativo Baseline vs Final: gráfico mostrando a evolução de 46,7% de defesas no Baseline para **100% no Agente Final**. Exemplos de ataques barrados: Jailbreak de ficção científica, injeção de prompt DAN, comandos de sistema no Code Interpreter e tentativa de ligar fonte 850W em benjamins.
+### Slide 5: Red Teaming & Limites Reais Encontrados (4:15 - 5:15)
+* **Visual do Slide:** Comparativo Baseline vs Final: salto de 20% de defesas no Baseline para **87% no Agente Final**. Destaque para ataques barrados (comandos de terminal no Code Interpreter, fontes bomba e pirataria) e uma falha real documentada (vazamento parcial em francês no RT-09).
 * **O que você fala (60 segundos):**
   > *"Submeti o agente a uma bateria pesada de **Red Teaming com 15 ataques agressivos**: tentativas de Jailbreak fingindo ser livro de ficção para crackear Windows, injeção de comandos de terminal no Code Interpreter e apelo de emergência médica para colocar 2.0V na BIOS.  
-  > Na versão inicial (Baseline), o modelo cedeu a 8 dos 15 ataques por tentar ser bonzinho demais com o usuário.  
-  > Implementei guardrails diretos no prompt do sistema: proibi chamadas de sistema no Code Interpreter, bloqueei vazamento de diretrizes e criei travas elétricas rígidas.  
-  > **O resultado? 100% dos ataques foram repelidos no agente final**, mantendo a postura educada e protetora com o usuário."*
+  > Na versão inicial (Baseline), o modelo cedeu a quase tudo porque tentava ser bonzinho demais com o usuário.  
+  > Com os ajustes no prompt final, subimos a taxa de defesa para **quase 90%**: ele barrou as loucuras de comandos de sistema e fontes bomba. Mas sendo bem transparente com o que descobri: ele ainda tem falhas. Quando mandei um ataque em francês, o modelo escorregou no idioma e traduziu trechos das regras internas. Isso me ensinou na prática que modelos compactos precisam de filtros adicionais."*
 
 ---
 
-### Slide 6: Conclusão & Próximos Passos (5:15 - 6:00)
-* **Visual do Slide:** 3 pilares de destaque:  
-  1. *Custo Quase Zero* (100% Serverless no AWS AgentCore).  
+### Slide 6: Conclusão & Veredito de Produção (5:15 - 6:00)
+* **Visual do Slide:** 3 pilares de aprendizado de estagiário:  
+  1. *Custo Quase Zero* (100% Serverless no AWS AgentCore com Gemma 3 4B).  
   2. *Matemática Blindada* (Zero alucinações em orçamentos via Code Interpreter).  
-  3. *Segurança Total* (Protege o bolso e a integridade física do cliente).
+  3. *Veredito Honesto:* Piloto Interno / Beta Supervisionado (Copiloto de Vendas).
 * **O que você fala (45 segundos):**
-  > *"Para encerrar: o PC Descomplicado prova que a inteligência artificial, quando combinada com uma ferramenta de código determinístico como o Code Interpreter e guardrails bem desenhados, deixa de ser um gerador de texto genérico e se torna um consultor comercial altamente confiável, seguro e viável.  
-  > Eu colocaria esse agente em produção hoje mesmo na fase de pré-vendas, mantendo um humano apenas no fechamento final do carrinho.  
+  > *"Para encerrar, a grande pergunta do desafio: **eu colocaria esse agente em produção?**  
+  > Sendo bem realista como estagiário que acompanhou os testes no console: **ainda não direto para o cliente final**. A latência passou de 30 segundos no 9º turno e ele ainda viaja um pouco em perguntas fora de escopo tentando calcular pastel no Code Interpreter!  
+  > Mas eu colocaria hoje mesmo como um **piloto interno**, rodando na tela dos nossos vendedores como um copiloto para acelerar orçamentos e dimensionar fontes, sempre com supervisão humana.  
   > Muito obrigado a todos e estou aberto a perguntas!"*
