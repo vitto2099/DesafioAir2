@@ -1,0 +1,31 @@
+# Pasta privada de preparação e atalhos locais (não sobe para o GitHub)
+preparacao/
+
+# Python & Ambientes Virtuais
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Testes & Avaliações
+.pytest_cache/
+.coverage
+htmlcov/
+.deepeval/
+
+# Arquivos de Sistema & IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Credenciais e Variáveis de Ambiente locais
+.env
+*.pem
+credentials
+aws_credentials.json
