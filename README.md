@@ -47,8 +47,8 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 │   ├── executar_red_team.py            # Script executor da campanha em tempo real
 │   └── red_team_execution_log.json     # Log consolidado com saídas e latências reais
 ├── reports/
-│   ├── prints/                         # 6 capturas de tela da execução real na AWS
-│   └── relatorio_final_4_a_6_paginas.md# Relatório técnico completo de entrega (4 a 6 páginas)
+│   ├── prints/                         # 10 capturas de tela da execução real na AWS
+│   └── Relatorio.md                    # Relatório técnico completo de entrega (4 a 6 páginas)
 └── presentation/
     └── roteiro_apresentacao_6min.md    # Roteiro cronometrado para o Demo Day (6 min)
 ```
