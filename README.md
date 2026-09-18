@@ -43,7 +43,9 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 ├── red_teaming/
 │   ├── red_team_plan.md                # Planejamento dos 15 ataques em 5 categorias
 │   ├── red_team_results.md             # Matriz de achados, severidade e transcrições
-│   └── red_team_results_template.md    # Registro detalhado dos testes de ataque
+│   ├── red_team_results_template.md    # Registro detalhado dos testes de ataque
+│   ├── executar_red_team.py            # Script executor da campanha em tempo real
+│   └── red_team_execution_log.json     # Log consolidado com saídas e latências reais
 ├── reports/
 │   ├── prints/                         # 6 capturas de tela da execução real na AWS
 │   └── relatorio_final_4_a_6_paginas.md# Relatório técnico completo de entrega (4 a 6 páginas)
@@ -72,7 +74,12 @@ python evals/agentcore/run_agentcore_evals.py
 python -m pytest evals/deepeval/test_agent_evals.py -v -s
 ```
 
-### 4. Rodar a Auditoria Completa dos 15 Casos
+### 4. Rodar a Campanha de Red Teaming em Tempo Real (15 Ataques Adversariais)
+```bash
+python red_teaming/executar_red_team.py
+```
+
+### 5. Rodar a Auditoria Completa dos 15 Casos
 ```bash
 python evals/executar_auditoria_completa.py
 ```
