@@ -40,7 +40,6 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 ├── red_teaming/
 │   ├── red_team_plan.md                # Planejamento dos 15 ataques em 5 categorias
 │   ├── red_team_results.md             # Matriz de achados, severidade e transcrições
-│   ├── red_team_results_template.md    # Registro detalhado dos testes de ataque
 │   ├── executar_red_team.py            # Script executor da campanha em tempo real
 │   └── red_team_execution_log.json     # Log consolidado com saídas e latências reais
 ├── reports/

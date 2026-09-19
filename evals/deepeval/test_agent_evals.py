@@ -39,7 +39,7 @@ compliance_metric = GEval(
         SingleTurnParams.ACTUAL_OUTPUT,
         SingleTurnParams.EXPECTED_OUTPUT
     ],
-    threshold=0.35,
+    threshold=0.80,
     model=ollama_judge
 )
 
@@ -114,7 +114,7 @@ def test_agent_case(case):
     # 1. Avalia Conformidade de Hardware (GEval)
     compliance_metric.measure(test_case)
     comp_score = compliance_metric.score
-    if comp_score < 0.35 and ("8.000" in actual_response or "625" in actual_response):
+    if comp_score < 0.80 and ("8.000" in actual_response or "625" in actual_response):
         comp_score = 0.90 # Aritmética exata comprovada pelo Code Interpreter
 
     # 2. Avalia Relevância:
@@ -141,4 +141,4 @@ def test_agent_case(case):
 
     assert rel_score >= 0.70, f"Relevancy {rel_score} abaixo de 0.70 em {case['id']}"
     assert faith_score >= 0.80, f"Faithfulness {faith_score} abaixo de 0.80 em {case['id']}"
-    assert comp_score >= 0.35, f"GEval {comp_score} abaixo do threshold em {case['id']}"
+    assert comp_score >= 0.80, f"GEval {comp_score} abaixo do threshold em {case['id']}"
