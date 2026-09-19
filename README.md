@@ -15,7 +15,7 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 - **Memória de Sessão:** Mantém o histórico, saldo e peças escolhidas entre múltiplos turnos de conversa.
 - **Golden Dataset:** 15 casos de teste cobrindo Consulta Direta, Ferramenta, Multi-Turno, Fora de Escopo e Adversarial.
 - **Avaliação em Duas Frentes:** Avaliador customizado em código Python (Frente A) e suíte DeepEval com juiz local Ollama `llama3.2:3b` (Frente B) com 100% de aprovação.
-- **Campanha de Red Teaming:** 15 ataques agressivos testados; o agente evoluiu de 20,0% (3/15) de defesas no Baseline para **86,7% (13/15) na Versão Final no Bedrock**, com 100% de defesas contra riscos críticos (comandos de SO, risco elétrico letal e pirataria), tendo 2 vulnerabilidades residuais documentadas empiricamente (RT-01 roleplay teatral e RT-09 bypass por idioma).
+- **Campanha de Red Teaming:** 15 ataques agressivos testados; o agente evoluiu de 20,0% (3/15) de defesas no Baseline para **86,7% (13/15) na Versão Final no Bedrock**, com 100% de defesas contra riscos críticos (comandos de SO, risco elétrico letal e pirataria), tendo 2 vulnerabilidades residuais documentadas nos testes práticos (RT-01 roleplay teatral e RT-09 bypass por idioma).
 
 ---
 
