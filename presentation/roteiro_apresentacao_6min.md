@@ -1,6 +1,6 @@
 # Roteiro de Apresentação: PC Descomplicado (Demo Day - 6 Minutos)
 **Air Company AI Fellowship - Desafio do Mês 2**  
-*Apresentador:* Vitor C. K.  
+*Apresentador:* Vitor Camargo Kunicki  
 *Tempo Total:* 6 minutos cravados  
 
 ---
@@ -27,7 +27,7 @@
 ---
 
 ### Slide 2: O Agente & A Arquitetura AWS Serverless (1:00 - 2:00)
-* **Visual do Slide:** Diagrama limpo da arquitetura: Usuário ➔ AWS Bedrock AgentCore (us-east-2) ➔ Modelo Econômico (Google Gemma 3 4B IT Sob Demanda) ➔ Ferramenta Nativa Code Interpreter (Python Sandbox).
+* **Visual do Slide:** Diagrama limpo da arquitetura: Usuário -> AWS Bedrock AgentCore (us-east-2) -> Modelo Econômico (Google Gemma 3 4B IT Sob Demanda) -> Ferramenta Nativa Code Interpreter (Python Sandbox).
 * **O que você fala (60 segundos):**
   > *"Para tornar essa solução viável no mundo real, a arquitetura foi desenhada seguindo à risca as regras de ouro do nosso orientador Jacques:  
   > 1. É 100% Serverless, rodando no **AWS Bedrock / AgentCore** na região `us-east-2` (Ohio).  
@@ -37,7 +37,7 @@
 ---
 
 ### Slide 3: O Superpoder do Code Interpreter (2:00 - 3:15)
-* **Visual do Slide:** Print real do console AWS: o cliente passando 5 peças com preços e potências em Watts. Do lado, o Code Interpreter executando o Python: `(65 + 115 + 50 + 10) * 1.30 = 312W ➔ Recomendação: Fonte 500W/550W 80 Plus` e recuperando o saldo de R$ 250 do turno anterior.
+* **Visual do Slide:** Print real do console AWS: o cliente passando 5 peças com preços e potências em Watts. Do lado, o Code Interpreter executando o Python: `(65 + 115 + 50 + 10) * 1.30 = 312W -> Recomendação: Fonte 500W/550W 80 Plus` e recuperando o saldo de R$ 250 do turno anterior.
 * **O que você fala (75 segundos):**
   > *"Aqui está o grande divisor de águas do meu agente. Qualquer modelo tradicional de linguagem alucina na matemática quando você pede para somar várias peças ou calcular consumo elétrico com folga.  
   > Com o **Code Interpreter**, o modelo escreve e executa código Python em tempo real na nuvem da AWS.  
@@ -47,8 +47,8 @@
 
 ### Slide 4: Avaliações Automatizadas & Golden Dataset (3:15 - 4:15)
 * **Visual do Slide:** Tabela com as duas frentes de avaliação:  
-  - *Frente A:* Custom Evaluator em Python (Regras de AM5, Fontes Bomba e Pirataria) ➔ 100% Pass.  
-  - *Frente B:* DeepEval com Ollama local (`llama3.2:3b`) ➔ Relevancy: 0.95 | Faithfulness: 0.96 | G-Eval: 0.95.
+  - *Frente A:* Custom Evaluator em Python (Regras de AM5, Fontes Bomba e Pirataria) -> 100% Pass.  
+  - *Frente B:* DeepEval com Ollama local (`llama3.2:3b`) -> Relevancy: 0.95 | Faithfulness: 0.96 | G-Eval: 0.95.
 * **O que você fala (60 segundos):**
   > *"Montei um **Golden Dataset de 15 casos de teste** cobrindo desde consultas diretas até conversas multi-turno e pegadinhas adversariais.  
   > Para garantir qualidade de ponta a ponta, avaliei em duas frentes:  

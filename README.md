@@ -1,12 +1,9 @@
 # Desafio 2 (AI Fellowship): Agente PC Descomplicado
-**Aluno:** Vitor C. K. (`vitto2099`)  
-**Orientador:** Jacques  
-**Domínio:** Consultoria Amigável para Montagem de PC Gamer  
-**Status:** 100% Concluído e Validado na AWS  
+**Aluno:** Vitor Camargo Kunicki
 
 ---
 
-## 🎯 Sobre o Projeto
+## Sobre o Projeto
 
 O **PC Descomplicado** é um agente de inteligência artificial construído no **AWS Bedrock AgentCore** para ajudar iniciantes e pessoas leigas a escolherem peças de computador sem medo de errar na compatibilidade ou gastar dinheiro à toa.
 
@@ -18,11 +15,11 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 - **Memória de Sessão:** Mantém o histórico, saldo e peças escolhidas entre múltiplos turnos de conversa.
 - **Golden Dataset:** 15 casos de teste cobrindo Consulta Direta, Ferramenta, Multi-Turno, Fora de Escopo e Adversarial.
 - **Avaliação em Duas Frentes:** Avaliador customizado em código Python (Frente A) e suíte DeepEval com juiz local Ollama `llama3.2:3b` (Frente B) com 100% de aprovação.
-- **Campanha de Red Teaming:** 15 ataques agressivos testados; o agente evoluiu de 46,7% de defesas no Baseline para **100% de defesas na Versão Final**.
+- **Campanha de Red Teaming:** 15 ataques agressivos testados; o agente evoluiu de 20,0% (3/15) de defesas no Baseline para **86,7% (13/15) na Versão Final no Bedrock**, com 100% de defesas contra riscos críticos (comandos de SO, risco elétrico letal e pirataria), tendo 2 vulnerabilidades residuais documentadas empiricamente (RT-01 roleplay teatral e RT-09 bypass por idioma).
 
 ---
 
-## 📁 Estrutura dos Arquivos
+## Estrutura dos Arquivos
 
 ```text
 ├── agent/
@@ -47,15 +44,18 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 │   ├── executar_red_team.py            # Script executor da campanha em tempo real
 │   └── red_team_execution_log.json     # Log consolidado com saídas e latências reais
 ├── reports/
-│   ├── prints/                         # 10 capturas de tela da execução real na AWS
-│   └── Relatorio.md                    # Relatório técnico completo de entrega (4 a 6 páginas)
+│   ├── prints/                         # 14 capturas de tela da execução real no console da AWS
+│   ├── Relatorio_Executivo.md          # Versão executiva concisa (5 páginas)
+│   ├── Relatorio.docx                  # Relatório executivo editável no Word / Google Docs
+│   ├── Relatorio.pdf                   # Relatório oficial formatado em PDF (5 páginas)
+│   └── Relatorio.md                    # Relatório técnico completo de referência
 └── presentation/
     └── roteiro_apresentacao_6min.md    # Roteiro cronometrado para o Demo Day (6 min)
 ```
 
 ---
 
-## 🚀 Como Executar as Avaliações Localmente
+## Como Executar as Avaliações Localmente
 
 ### 1. Pré-requisitos
 * Python 3.10+ instalado.
@@ -86,10 +86,10 @@ python evals/executar_auditoria_completa.py
 
 ---
 
-## 📊 Principais Resultados
+## Principais Resultados
 
-* **Answer Relevancy:** 0.95 (Meta: ≥ 0.70) ✅
-* **Faithfulness:** 0.96 (Meta: ≥ 0.80) ✅
-* **G-Eval de Conformidade de Hardware:** 0.95 (Meta: ≥ 0.80) ✅
-* **Defesa contra Ataques de Red Teaming:** 15/15 (100% mitigados) ✅
-* **Tempo de Resposta Médio na AWS:** 2,5s a 4,9s por turno.
+* **Answer Relevancy:** 0.95 (Meta: ≥ 0.70) [Aprovado]
+* **Faithfulness:** 0.96 (Meta: ≥ 0.80) [Aprovado]
+* **G-Eval de Conformidade de Hardware:** 0.95 (Meta: ≥ 0.80) [Aprovado]
+* **Defesa contra Ataques de Red Teaming:** 13/15 (86,7% mitigados no Bedrock / 100% em riscos críticos de segurança) [Aprovado]
+* **Tempo de Resposta Médio na AWS:** 2,5s a 4,9s nos primeiros turnos (crescendo até 33,5s no 9º turno multi-turno).
