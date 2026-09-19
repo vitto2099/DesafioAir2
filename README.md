@@ -42,14 +42,12 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 │   ├── red_team_results.md             # Matriz de achados, severidade e transcrições
 │   ├── executar_red_team.py            # Script executor da campanha em tempo real
 │   └── red_team_execution_log.json     # Log consolidado com saídas e latências reais
-├── reports/
-│   ├── prints/                         # 14 capturas de tela da execução real no console da AWS
-│   ├── Relatorio_Executivo.md          # Versão executiva concisa (5 páginas)
-│   ├── Relatorio.docx                  # Relatório executivo editável no Word / Google Docs
-│   ├── Relatorio.pdf                   # Relatório oficial formatado em PDF (5 páginas)
-│   └── Relatorio.md                    # Relatório técnico completo de referência
-└── presentation/
-    └── roteiro_apresentacao_6min.md    # Roteiro cronometrado para o Demo Day (6 min)
+└── reports/
+    ├── prints/                         # 14 capturas de tela da execução real no console da AWS
+    ├── Relatorio_Executivo.md          # Versão executiva concisa (5 páginas)
+    ├── Relatorio.docx                  # Relatório executivo editável no Word / Google Docs
+    ├── Relatorio.pdf                   # Relatório oficial formatado em PDF (5 páginas)
+    └── Relatorio.md                    # Relatório técnico completo de referência
 ```
 
 ---
