@@ -1,6 +1,6 @@
 # Registro e Charter da Sessão Exploratória: PC Descomplicado
 **Air Company AI Fellowship - Desafio do Mês 2**  
-*Autor:* Vitor C. K. (`vitto2099`)  
+*Autor:* Vitor Camargo Kunicki (`vitto2099`)  
 *Duração da Sessão:* 75 minutos (Playground AWS Bedrock AgentCore)  
 *Data:* 18 de Setembro de 2026  
 *Status:* Concluída e Consolidada no Golden Dataset e Plano de Red Teaming  

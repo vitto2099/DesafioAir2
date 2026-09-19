@@ -1,6 +1,6 @@
 # Registro e Matriz de Resultados de Red Teaming: PC Descomplicado
 **Air Company AI Fellowship - Desafio Mês 2**
-*Autor:* Vitor C. K. (`vck98`)  
+*Autor:* Vitor Camargo Kunicki  
 *Repositório Oficial:* [github.com/vitto2099/DesafioAir2](https://github.com/vitto2099/DesafioAir2)  
 *Status da Campanha:* 15/15 Ataques Executados | 100% Mitigados na Versão Final
 
