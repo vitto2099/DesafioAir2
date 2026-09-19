@@ -1,8 +1,6 @@
 # Relatório Final - Desafio 2 (AI Fellowship)
 **Projeto:** Agente PC Descomplicado  
 **Aluno:** Vitor Camargo Kunicki  
-**Orientador:** Jacques  
-**Data:** 19 de Setembro de 2026  
 **Repositório do Projeto:** [github.com/vitto2099/DesafioAir2](https://github.com/vitto2099/DesafioAir2)  
 
 ---
@@ -65,11 +63,10 @@ As diretrizes do Fellowship enfatizam que juízes fracos geram scores instáveis
 
 ## 3. Como Estruturei o Agente na AWS
 
-Seguindo as orientações passadas pelo Jacques para evitar custos desnecessários e surpresas na fatura da nuvem, montei a arquitetura 100% serverless:
+Seguindo as orientações de boas práticas para evitar custos desnecessários e surpresas na fatura da nuvem, montei a arquitetura 100% serverless:
 
 * **Plataforma:** Amazon Bedrock AgentCore Harness.
 * **ID do Agente:** `PcDescomplicado-LQhcwVVUBy` (Endpoint `DEFAULT`).
-* **Região:** `us-east-2` (Ohio).
 * **Modelo Utilizado:** **Google Gemma 3 4B IT (v1)** configurado em modo **Sob Demanda (On-Demand)**. Optei por esse modelo por ser muito leve, ágil nas respostas e extremamente barato (faturado estritamente por tokens usados, sem nenhuma cobrança fixa de instâncias provisionadas ou PTU).
 * **Ferramenta:** Ativei a ferramenta nativa `aws_codeinterpreter_v1`, que sobe um ambiente Python seguro e isolado pela própria AWS toda vez que o modelo precisa calcular orçamentos ou somar Watts de potência.
 * **Memória de Sessão:** Utilizei o controle de sessões do AgentCore para que o agente consiga lembrar do orçamento, do saldo e das peças escolhidas pelo usuário ao longo de vários turnos de conversa.
@@ -406,13 +403,13 @@ Sendo bem realista como profissional que acompanhou os testes de ponta a ponta n
 
 ---
 
-## 10. Checklist de Regras do Jacques (100% Cumpridas)
+## 10. Checklist de Boas Práticas e Economia (100% Cumpridas)
 
-| Regra de Governança | Como foi atendida no projeto |
+| Critério de Boa Prática | Como foi atendida no projeto |
 | :--- | :--- |
 | **1. Modelo mais barato sob demanda** | Escolhi o **Google Gemma 3 4B IT (v1)** em modo Sob Demanda (faturado estritamente por tokens usados, centavos por milhão). |
 | **2. 100% Serverless (zero PTU)** | Sem instâncias provisionadas ou cobranças por hora fixa. |
-| **3. Região oficial da AWS** | Agente implantado e testado em **`us-east-2` (Ohio)**. |
+| **3. Infraestrutura em nuvem** | Agente implantado e testado 100% serverless no Bedrock AgentCore. |
 | **4. Sem cartão pessoal / Seguro** | Utilizei exclusivamente a conta e limites de estudo do programa. |
 | **5. Ferramenta nativa da AWS** | Usei a ferramenta oficial **`aws_codeinterpreter_v1`** do AgentCore. |
 | **6. Memória de sessão funcional** | Comprovada nos testes: o agente lembrou dos R$ 250 de saldo entre os turnos no console da AWS. |

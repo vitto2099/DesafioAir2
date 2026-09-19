@@ -1,12 +1,12 @@
 # Relatório Final do Desafio 2 - PC Descomplicado
-**Aluno / Estagiário:** Vitor Camargo Kunicki | **Orientador:** Jacques | **Data:** 19/09/2026  
-**Repositório Oficial:** [github.com/vitto2099/DesafioAir2](https://github.com/vitto2099/DesafioAir2) | **Região:** AWS Bedrock us-east-2 (Ohio)
+**Aluno:** Vitor Camargo Kunicki  
+**Repositório Oficial:** [github.com/vitto2099/DesafioAir2](https://github.com/vitto2099/DesafioAir2)  
 
 ---
 
 ## 1. Planejamento: O que o Agente Faz, Riscos, Metas e Modelo Juiz
 
-Olá, Jacques e avaliadores! Neste Desafio 2, meu papel como estagiário foi construir o **PC Descomplicado** dentro do **AWS Bedrock AgentCore**. A ideia do projeto é ajudar pessoas que são leigas e não entendem nada de informática a escolher as peças certas para montar um computador gamer sem gastar dinheiro à toa e sem termos difíceis.
+Olá, avaliadores! Neste Desafio 2, meu papel como estagiário foi construir o **PC Descomplicado** dentro do **AWS Bedrock AgentCore**. A ideia do projeto é ajudar pessoas que são leigas e não entendem nada de informática a escolher as peças certas para montar um computador gamer sem gastar dinheiro à toa e sem termos difíceis.
 
 Para resolver o problema de modelos de IA que erram contas de cabeça, ativei o **Code Interpreter nativo da AWS**, que roda código Python na nuvem para somar preços e calcular a potência da fonte em Watts com total precisão.
 
@@ -31,8 +31,8 @@ Para resolver o problema de modelos de IA que erram contas de cabeça, ativei o 
 
 ## 2. O Agente: Como Montei a Estrutura na AWS Bedrock
 
-Segui direitinho as regras do Jacques para não gastar dinheiro à toa na nuvem:
-* **Onde está rodando:** No Amazon Bedrock AgentCore na região **`us-east-2` (Ohio)**, no Harness chamado `PcDescomplicado`.
+Segui as boas práticas para não gastar dinheiro à toa na nuvem:
+* **Onde está rodando:** No Amazon Bedrock AgentCore  no Harness chamado `PcDescomplicado`.
 * **Modelo escolhido:** **Google Gemma 3 4B IT (v1)** sob demanda. Escolhi esse modelo porque ele é super barato e cobra só por mensagem enviada (centavos por atendimento), sem custo fixo de máquinas ligadas (zero PTU).
 * **Ferramenta de cálculo:** A ferramenta nativa `aws_codeinterpreter_v1`, que roda Python limpo e rápido para fazer as somas e contas de Watts.
 * **Memória da conversa:** O agente usa o `Session ID` da AWS para lembrar do saldo em dinheiro e das peças que o usuário já escolheu nos turnos anteriores.
@@ -174,13 +174,13 @@ Aqui dá para ver claramente como o agente melhorou depois que tirei as instruç
 
 ---
 
-## 9. Checklist das Regras do Jacques (100% Cumpridas)
+## 9. Checklist de Boas Práticas e Economia (100% Cumpridas)
 
-| Regra que o Jacques Pediu | Como eu Cumpri no Projeto | Status |
+| Critério de Boa Prática | Como eu Cumpri no Projeto | Status |
 | :--- | :--- | :---: |
 | **1. Modelo mais barato sob demanda** | Usei o Google Gemma 3 4B IT (v1) sob demanda, pagando só os centavos dos tokens usados. | 100% Cumprido |
 | **2. 100% Serverless (zero PTU)** | Zero máquinas fixas ligadas e zero custo mensal parado. | 100% Cumprido |
-| **3. Região certa da nuvem AWS** | Tudo rodando na região oficial `us-east-2` (Ohio). | 100% Cumprido |
+| **3. Infraestrutura em nuvem** | Tudo rodando 100% serverless no Amazon Bedrock. | 100% Cumprido |
 | **4. Ferramenta nativa de verdade** | Ativei o `aws_codeinterpreter_v1` do Bedrock AgentCore rodando Python. | 100% Cumprido |
 | **5. Memória de sessão funcionando** | Testei em 9 turnos seguidos e ele lembrou do saldo de R$ 250 do começo ao fim. | 100% Cumprido |
 | **6. Sem cartão pessoal e tudo limpo** | Rodei na conta oficial do curso e não deixei nenhum recurso sobrando. | 100% Cumprido |
