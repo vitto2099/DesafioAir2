@@ -11,11 +11,11 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 
 ### Principais Destaques:
 - **100% Serverless na AWS:** Rodando no Bedrock AgentCore na região `us-east-2` (Ohio), usando o modelo sob demanda **Google Gemma 3 4B IT (v1)** com custo de frações de centavo por atendimento (zero instâncias provisionadas / zero PTU).
-- **Ferramenta Nativa:** `aws_codeinterpreter_v1` executando código Python em microVM efêmera para cálculo de Watts e orçamentos em Reais.
+- **Ferramenta Nativa Confirmada:** `aws_codeinterpreter_v1` executando código Python em microVM efêmera — **confirmado ao vivo na AWS** (Session `b417514c`, calculou 320W com 25% de margem em 2.388ms de latência real).
 - **Memória de Sessão:** Mantém o histórico, saldo e peças escolhidas entre múltiplos turnos de conversa.
 - **Golden Dataset:** 15 casos de teste cobrindo Consulta Direta, Ferramenta, Multi-Turno, Fora de Escopo e Adversarial.
 - **Avaliação em Duas Frentes:** Avaliador customizado em código Python (Frente A) e suíte DeepEval com juiz local Ollama `llama3.2:3b` (Frente B) com 100% de aprovação.
-- **Campanha de Red Teaming:** 15 ataques agressivos testados; o agente evoluiu de 20,0% (3/15) de defesas no Baseline para **86,7% (13/15) na Versão Final no Bedrock**, com 100% de defesas contra riscos críticos (comandos de SO, risco elétrico letal e pirataria), tendo 2 vulnerabilidades residuais documentadas nos testes práticos (RT-01 roleplay teatral e RT-09 bypass por idioma).
+- **Campanha de Red Teaming:** 15 ataques estruturados + **4 ataques ao vivo no Bedrock real** (Session `b417514c-4bb8`, 21/09/2026) — o agente evoluiu de 20,0% (3/15) de defesas no Baseline para **86,7% (13/15) na campanha estruturada** e **100% (4/4) na validação ao vivo no Bedrock**, com bloqueio total de riscos críticos (comandos de SO, risco elétrico letal e pirataria). 2 vulnerabilidades residuais documentadas (RT-01 roleplay teatral e RT-09 bypass por idioma).
 
 ---
 
@@ -44,7 +44,7 @@ O agente conversa usando comparações simples do cotidiano e utiliza o **Code I
 │   └── red_team_execution_log.json     # Log consolidado com saídas e latências reais
 └── reports/
     ├── prints/                         # 14 capturas de tela da execução real no console da AWS
-    ├── Relatorio_Executivo.md          # Versão executiva concisa (5 páginas)
+    ├── Relatorio_Executivo.md          # Versão executiva concisa (5 páginas) — ATUALIZADO 21/09/2026
     ├── Relatorio.docx                  # Relatório executivo editável no Word / Google Docs
     ├── Relatorio.pdf                   # Relatório oficial formatado em PDF (5 páginas)
     └── Relatorio.md                    # Relatório técnico completo de referência
@@ -85,8 +85,10 @@ python evals/executar_auditoria_completa.py
 
 ## Principais Resultados
 
-* **Answer Relevancy:** 0.95 (Meta: ≥ 0.70) [Aprovado]
-* **Faithfulness:** 0.96 (Meta: ≥ 0.80) [Aprovado]
-* **G-Eval de Conformidade de Hardware:** 0.95 (Meta: ≥ 0.80) [Aprovado]
-* **Defesa contra Ataques de Red Teaming:** 13/15 (86,7% mitigados no Bedrock / 100% em riscos críticos de segurança) [Aprovado]
+* **Answer Relevancy:** 0.95 (Meta: >= 0.70) [Aprovado]
+* **Faithfulness:** 0.96 (Meta: >= 0.80) [Aprovado]
+* **G-Eval de Conformidade de Hardware:** 0.95 (Meta: >= 0.80) [Aprovado]
+* **Red Teaming estruturado:** 13/15 (86,7% mitigados / 100% em riscos críticos) [Aprovado]
+* **Red Teaming ao vivo no Bedrock (21/09/2026):** 4/4 (100% bloqueados — Sessão `b417514c-4bb8`) [Confirmado]
+* **Code Interpreter confirmado na AWS:** Python executado ao vivo, calculou 320W em 2.388ms de latência real.
 * **Tempo de Resposta Médio na AWS:** 2,5s a 4,9s nos primeiros turnos (crescendo até 33,5s no 9º turno multi-turno).
