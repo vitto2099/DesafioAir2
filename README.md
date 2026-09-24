@@ -48,10 +48,8 @@ O agente conversa usando comparações didáticas do cotidiano (a fonte é o cor
 │   └── roteiro_demo_6min.md            # Roteiro minuto a minuto da apresentação em vídeo
 └── reports/
     ├── prints/                         # 23 capturas de tela da execução real no console da AWS
-    ├── Relatorio_Executivo.md          # Versão executiva concisa (5 páginas) — ATUALIZADO 21/09/2026
-    ├── Relatorio.docx                  # Relatório executivo editável no Word / Google Docs
-    ├── Relatorio.pdf                   # Relatório oficial formatado em PDF
-    └── Relatorio.md                    # Relatório técnico completo de referência
+    ├── Relatorio.pdf                   # Relatório oficial formatado em PDF (4 páginas)
+    └── Relatorio.md                    # Relatório consolidado nas normas do desafio (4 páginas)
 ```
 
 ---

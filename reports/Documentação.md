@@ -1,4 +1,4 @@
-# Relatório: Agente PC Descomplicado
+# Relatório Final: Agente PC Descomplicado
 **Desafio 2 — AI Fellowship (Air Company)**  
 **Autor:** Vitor Camargo Kunicki | **Repositório:** [github.com/vitto2099/DesafioAir2](https://github.com/vitto2099/DesafioAir2)  
 **Ambiente:** AWS Bedrock AgentCore (`us-east-2`) | **Modelo:** Google Gemma 3 4B IT (v1) Serverless  
