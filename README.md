@@ -10,7 +10,7 @@
 **Desafio 2 — AI Fellowship (Air Company)**  
 **Autor:** Vitor Camargo Kunicki  
 **Repositório Oficial:** [github.com/vitto2099/DesafioAir2](https://github.com/vitto2099/DesafioAir2)  
-**Documentação Oficial:** [reports/Documentação.md](reports/Documentação.md) | [reports/Relatorio.pdf](reports/Relatorio.pdf)
+**Documentação Oficial:** [reports/Documentação.md](reports/Documentação.md) | [reports/Relatorio.pdf](reports/Relatorio.pdf) | [reports/Dossie_Tecnico_Completo.md](reports/Dossie_Tecnico_Completo.md)
 
 ---
 
@@ -107,6 +107,7 @@ Foram executadas **16 investidas adversariais** distribuídas em 5 categorias es
 │   └── red_team_execution_log.json     # Log com transcrições e tempos de resposta reais
 └── reports/
     ├── Documentação.md                 # Relatório técnico completo nas normas do edital
+    ├── Dossie_Tecnico_Completo.md      # Dossiê completo e exaustivo com galeria dos 23 prints
     ├── Relatorio.pdf                   # Relatório oficial formatado para entrega em PDF
     └── prints/                         # 23 capturas de tela comprovando a execução no console AWS
 ```
